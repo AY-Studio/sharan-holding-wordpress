@@ -1,0 +1,33 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.fleet {
+  padding: $section-space 0;
+  padding-inline: 1.5rem;
+
+  .eyebrow {
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    margin-top: 1.75rem;
+  }
+
+  li::marker {
+    color: $gold;
+    content: "-  ";
+  }
+}
+.fleet h2 {
+  color: $cream;
+  margin-bottom: 1.25rem;
+}
+.fleet-copy {
+  padding-right: clamp(1rem, 5vw, 5rem);
+}
+.fleet-image {
+  width: 100%;
+  aspect-ratio: 600 / 640;
+  object-fit: cover;
+  max-height: 665px;
+}

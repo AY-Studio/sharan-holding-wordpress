@@ -1,0 +1,11 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+
+.hero { position: relative; min-height: clamp(43rem, 70vw, 61.95rem); color: #fff; background: url("../images/hero.png") 50% 43% / cover no-repeat; }
+.hero::before { position: absolute; inset: 0; content: ""; background: rgba(#000, .5); }
+.hero-content { position: relative; z-index: 1; padding-top: 5rem; }
+.hero .eyebrow { color: $cream; margin-bottom: 1rem; }
+.hero h1 { margin-bottom: .8rem; color: $cream; font-size: clamp(2.6rem, 4vw, 3.5rem); letter-spacing: .1rem; }
+.hero-copy { max-width: 45rem; }
+@media (max-width: 767.98px) { .hero { min-height: 45rem; background-position: 59% center; } .hero-content { padding-inline: 1.5rem; } }

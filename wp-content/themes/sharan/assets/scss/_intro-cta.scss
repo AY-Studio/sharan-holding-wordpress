@@ -1,0 +1,33 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+
+.intro-cta { 
+    position: relative; 
+    border: 35px solid $charcoal;
+    padding: $section-space 1rem;
+    background-image: linear-gradient(rgba($charcoal, .6), rgba($charcoal, .6)), url("../images/cta-bg.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include md {
+        background-size: min(90rem, calc(100% - 2rem)) auto;
+        min-height: 50rem;
+        border-top: 0;
+        border-bottom: 0;
+        border: 50px solid $charcoal;
+    }
+
+    @include lg {
+        background-size: min(90rem, calc(100% - 2rem)) auto;
+        min-height: 50rem;
+        border-top: 0;
+        border-bottom: 0;
+    }
+
+    .eyebrow { margin-bottom: 1rem; }
+
+}
+.intro-cta h2 { color: #fff; }
+.intro-cta p:not(.eyebrow) { margin: 1.5rem 0 2rem; }

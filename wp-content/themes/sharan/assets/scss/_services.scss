@@ -1,0 +1,55 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+
+.services { padding: $section-space 0; 
+
+	h2 {
+		@include lg {
+			letter-spacing: 4.8px;
+		}
+	}
+
+	.section-heading {
+
+		max-width: 100%;
+		margin-bottom: 40px;
+
+	}
+
+}
+.service-grid { align-items: start; max-width: 1135px; }
+.service-card { text-align: center; 
+	
+	@include lg {
+		margin-bottom: 40px;
+	}
+
+}
+.service-card-image { overflow: hidden; }
+.service-card img { display: block; width: 100%; aspect-ratio: 395 / 240; object-fit: cover; transition: transform .6s ease; 
+
+	max-height: 300px; 
+	
+	@include lg {
+	
+		max-height: 200px; 
+
+	}
+
+
+}
+.service-card h3 { margin: 2rem 0 1.1rem; font-size: clamp(1.5rem, 2vw, 2rem); letter-spacing: .12em;
+
+	
+
+}
+.service-card p { margin: 0 auto; max-width: 25rem; font-weight: 400; }
+
+@media (hover: hover) {
+	.service-card:hover img { transform: scale(1.15); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.service-card img { transition: none; }
+}

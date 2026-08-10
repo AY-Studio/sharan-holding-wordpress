@@ -1,0 +1,247 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+
+.contact { 
+    
+    padding: $section-space 0; 
+    padding-inline: 1.5rem;
+
+    .eyebrow { 
+        margin-bottom: 1rem;
+        letter-spacing: 1.6px; 
+    }
+
+    p {
+        margin-bottom: 1.5rem;
+    }
+
+    a {
+
+        text-decoration: none;
+        position: relative;
+
+        &.text-decoration-none {
+
+            &:after {
+                display: none;
+            }
+
+        }
+
+        &:after {
+
+            bottom: 0;
+            left: 0;
+            height: 1px;
+            position: absolute;
+            content: "";
+            width: 0%;
+            transition: .5s;
+            background: $cream;
+        }
+
+        &:hover {
+
+            &:after {
+                width: 100%;
+            }
+
+
+
+        }
+
+    }
+
+    .form-check-label {
+
+        text-transform: none;
+        font-size: .85rem;
+
+    }
+
+    input {
+
+        font-family: $display;
+
+    }
+
+}
+.contact h2 { color: $paper; letter-spacing: 4.8px; margin-bottom: 1.5rem; }
+.contact address { display: flex; flex-direction: column; gap: .9rem; margin-top: 2.2rem; font-family: $display; font-size: 1rem; font-style: normal; letter-spacing: 1.6px; text-transform: uppercase; }
+.quote-form label { display: block; margin-bottom: .4rem; font-size: 1rem; letter-spacing: .1em; }
+.quote-form .form-control, .quote-form .form-select { border-radius: 0; border-color: $paper; color: #fff; background-color: transparent; padding: 12px; }
+.quote-form .form-control:focus, .quote-form .form-select:focus { border-color: $gold; box-shadow: 0 0 0 .2rem rgba($gold, .2); }
+.quote-form .form-select { color-scheme: dark; font-family: $display; color: $bright-cream; font-weight: 300; }
+.quote-form ::placeholder { color: $bright-cream; font-family: $display; letter-spacing: .08em; text-transform: uppercase; font-weight: 300; }
+.quote-form .form-check-input { border-radius: 0; background-color: transparent; font-family: $display; text-transform: uppercase; }
+
+// Gravity Forms equivalent of the original static quote form.
+.contact .gform_wrapper {
+    color: $bright-cream;
+
+    form {
+        margin: 0;
+    }
+
+    .gform_fields {
+        row-gap: 1.5rem;
+    }
+
+    .gfield {
+        margin: 0;
+    }
+
+    .gfield_label,
+    .gform-field-label:not(.gform-field-label--type-inline) {
+        display: block;
+        margin-bottom: .4rem;
+        color: $bright-cream;
+        font-family: $display;
+        font-size: 1rem;
+        font-weight: 300;
+        letter-spacing: .1em;
+        line-height: 1.5;
+        text-transform: uppercase;
+    }
+
+    .gfield_required {
+        color: $gold;
+    }
+
+    input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),
+    select,
+    textarea {
+        width: 100%;
+        border: 1px solid $paper;
+        border-radius: 0;
+        color: #fff;
+        background-color: transparent;
+        padding: 12px;
+        font-family: $display;
+        font-weight: 300;
+        line-height: 1.5;
+        height: 50px;
+
+        &:focus {
+            border-color: $gold;
+            outline: 0;
+            box-shadow: 0 0 0 .2rem rgba($gold, .2);
+        }
+    }
+
+    select {
+        color-scheme: dark;
+        color: $bright-cream;
+    }
+
+    textarea {
+        min-height: 10.5rem;
+        resize: vertical;
+    }
+
+    ::placeholder {
+        color: $bright-cream;
+        opacity: 1;
+        font-family: $display;
+        font-weight: 300;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+    }
+
+    .gchoice,
+    .ginput_container_consent {
+        display: flex;
+        align-items: flex-start;
+        gap: .65rem;
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+        flex: 0 0 auto;
+        width: 1rem;
+        height: 1rem;
+        margin-top: .2rem;
+        border: 1px solid $paper;
+        border-radius: 0;
+        accent-color: $gold;
+        background-color: transparent;
+    }
+
+    .gchoice label,
+    .ginput_container_consent label,
+    .gform-field-label--type-inline {
+        margin: 0;
+        color: $bright-cream;
+        font-family: $display;
+        font-weight: 300;
+        letter-spacing: .1rem;
+        text-transform: uppercase;
+    }
+
+    .gfield_description,
+    .gform_fileupload_rules {
+        color: $cream;
+        font-size: .85rem;
+    }
+
+    .gfield_validation_message,
+    .validation_message,
+    .gform_validation_errors {
+        border: 1px solid $gold;
+        border-radius: 0;
+        color: $bright-cream;
+        background: rgba($gold, .12);
+        box-shadow: none;
+    }
+
+    .gfield_error input:not([type="checkbox"]):not([type="radio"]),
+    .gfield_error select,
+    .gfield_error textarea {
+        border-color: $gold;
+    }
+
+    .gform_footer,
+    .gform_page_footer {
+        margin-top: 1.5rem;
+        padding: 0;
+    }
+
+    // Gravity Forms' Orbital theme applies button styles through classes and
+    // custom properties, so target its generated classes as well as the type.
+    .gform_button,
+    .gform-button,
+    input.gform_button,
+    button.gform_button,
+    input[type="submit"],
+    button[type="submit"] {
+        --gf-local-bg-color: #{$paper};
+        --gf-local-color: #{$charcoal};
+        --gf-local-border-color: #{$paper};
+        appearance: none;
+        display: inline-block;
+        width: auto;
+        min-height: 0;
+        margin: 0;
+        border: 1px solid $paper !important;
+        border-radius: 0 !important;
+        color: $charcoal !important;
+        background: $paper !important;
+        padding: .7rem 1.4rem !important;
+        font-family: $display !important;
+        font-size: 1rem !important;
+        font-weight: 300 !important;
+        letter-spacing: .12em !important;
+        line-height: 1.5 !important;
+        text-transform: uppercase !important;
+        transition: all .5s ease !important;
+
+        &:hover,
+        &:focus-visible {
+            --gf-local-bg-color: transparent;
+            --gf-local-color: #{$paper};
+            color: $paper !important;
+            background: transparent !important;
+        }
+    }
+}
