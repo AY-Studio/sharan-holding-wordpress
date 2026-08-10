@@ -45,6 +45,13 @@
   position: relative;
   margin-top: 3rem;
   padding-bottom: 12.5rem;
+
+  padding-inline: 1.5rem;
+
+  @include lg {
+    padding-inline: 0;
+  }
+
 }
 .review-grid figure {
   display: flex;
