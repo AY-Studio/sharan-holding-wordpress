@@ -116,3 +116,82 @@ section {
 .gform_heading {
   display: none !important;
 }
+
+
+
+.page-404__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // color: $color__secondary;
+//   min-height: calc(100vh - 150px);
+  padding: 60px 10px;
+  text-align: center;
+
+	@include lg {
+		padding: 140px 0;
+	}
+}
+.page-404__container img {
+  width: 100%;
+  max-width: 280px;
+  margin-bottom: 32px;
+	@include sm {
+		max-width: 320px;
+	}
+	@include md {
+		max-width: 443px;
+    margin-bottom: 54px;
+	}
+}
+
+.page-404__h1 {
+
+	font-size: 125px;
+	// color: $color__secondary;
+
+	@include md {
+		font-size: 175px;
+		line-height: 1em;
+	}
+
+	@include xl {
+		font-size: 250px;
+		line-height: 1em;
+	}
+
+
+
+}
+
+.page-404__title {
+  font-size: 32px;
+  margin-bottom: 14px;
+	@include sm {
+		font-size: 42px;
+	}
+	@include md {
+		ont-size: 54px;
+	}
+}
+.page-404__subtitle {
+  font-size: 16px;
+  color: #666;
+	@include sm {
+		font-size: 18px;
+	}
+}
+.page-404__btn {
+	padding: 12px 24px;
+    border-radius: 4px;
+    // border: 1px solid $color__secondary;
+	margin-top: 25px;
+	// color: $color__secondary;
+	cursor: pointer;
+
+	&:hover {
+		// background: $color__primary;
+		// color: $color__secondary;
+	}
+
+}

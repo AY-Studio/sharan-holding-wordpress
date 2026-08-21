@@ -1,0 +1,58 @@
+0000.000 (0) Opened log file at time: Tue, 18 Aug 2026 13:46:17 +0000 on http://sharan-wordpress.local
+0000.002 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 2.26.1.26 WP: 7.0.3 PHP: 8.2.29 (fpm-fcgi, Darwin Garys-MacBook-Pro.local 25.6.0 Darwin Kernel Version 25.6.0: Sat Jul 11 15:27:04 PDT 2026; root:xnu-12377.161.13~4/RELEASE_ARM64_T6050 arm64) MySQL: 8.0.35 (max packet size=1073741824) WPLANG: en_GB Server: nginx/1.26.1 safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 7.1M | 8M) multisite: N openssl: OpenSSL 3.5.1 1 Jul 2025 mcrypt: N LANG:  WP Proxy: disabled ZipArchive::addFile: Y
+0000.002 (0) Free space on disk containing Updraft's temporary directory: 720031.6 MB
+0000.006 (0) Tasks: Backup files: 1 (schedule: unset) Backup DB: 0 (schedule: unset)
+0000.007 (0) Requesting semaphore lock (f) (apparently not via scheduler)
+0000.008 (0) Set semaphore last lock (f) time to 2026-08-18 13:46:17
+0000.008 (0) Semaphore lock (f) complete
+0000.009 (0) Backup run: resumption=0, nonce=c8ba25d5d5c1, file_nonce=c8ba25d5d5c1 begun at=1787060777 (0s ago), job type=backup, label=Backup of: sharan-wordpress.local
+0000.010 (0) Scheduling a resumption (1) after 300 seconds (1787061077) in case this run gets aborted
+0000.011 (0) Checking if we have a zip executable available
+0000.011 (0) Testing: /usr/bin/zip
+0000.022 (0) Output: zip warning: binziptest/test.zip not found or empty
+0000.022 (0) Output: adding: binziptest/subdir1/	(in=0) (out=0) (stored 0%)
+0000.023 (0) Output: adding: binziptest/subdir1/subdir2/	(in=0) (out=0) (stored 0%)
+0000.023 (0) Output: adding: binziptest/subdir1/subdir2/test.html	(in=131) (out=107) (deflated 18%)
+0000.023 (0) Output: total bytes=131, compressed=107 -> 18% savings
+0000.030 (0) Output: adding: binziptest/subdir1/subdir2/test2.html	(in=138) (out=113) (deflated 18%)
+0000.030 (0) Output: total bytes=269, compressed=220 -> 18% savings
+0000.031 (0) Working binary zip found: /usr/bin/zip
+0000.032 (0) Zip engine: found/will use a binary zip: /usr/bin/zip
+0000.033 (0) Creation of backups of directories: beginning
+0000.034 (0) No backup of plugins: excluded by user's options
+0000.034 (0) Beginning creation of dump of themes (split every: 100 MB)
+0000.039 (0) Total entities for the zip file: 45 directories, 226 files (0 skipped as non-modified), 9.6 MB
+0000.041 (0) Zip: backup_2026-08-18-1446_Sharan_Executive_Transport_c8ba25d5d5c1-themes.zip.tmp: 100 files added (on-disk size: 0 KB)
+0000.042 (0) Zip: backup_2026-08-18-1446_Sharan_Executive_Transport_c8ba25d5d5c1-themes.zip.tmp: 200 files added (on-disk size: 0 KB)
+0000.186 (0) backup_2026-08-18-1446_Sharan_Executive_Transport_c8ba25d5d5c1-themes.zip.tmp: size is now: 3.30 MB
+0000.187 (0) Creating zip file manifest (backup_2026-08-18-1446_Sharan_Executive_Transport_c8ba25d5d5c1-themes.zip.list-temp.tmp)
+0000.188 (0) Successfully created zip file manifest (size: 14763)
+0000.207 (0) Created themes zip (0) - 3342.7 KB in 0.2 s (19439.4 KB/s) (sha1: b0a0bbfd0126de6e7856f52d98421b9fb349330c, sha256: 596f6e2b27cedb5d9389bfdff87cae54962ceb7a609ed865f8551f205a5ce632)
+0000.208 (0) Cloud backup selection (2/1): remotesend with instance (1/1) (last)
+0000.209 (0) Beginning dispatch of backup to remote (remotesend)
+0000.209 (0) remotesend: upload : attempt: backup_2026-08-18-1446_Sharan_Executive_Transport_c8ba25d5d5c1-themes.zip
+0000.756 (0) remotesend: backup_2026-08-18-1446_Sharan_Executive_Transport_c8ba25d5d5c1-themes.zip: existing size: 0
+0000.757 (0) Remote send upload: backup_2026-08-18-1446_Sharan_Executive_Transport_c8ba25d5d5c1-themes.zip (chunks: 2, of size: 2097152) -> remotesend://https://sharantransport.sitestage.xyz/backup_2026-08-18-1446_Sharan_Executive_Transport_c8ba25d5d5c1-themes.zip (0)
+0008.049 (0) Remotesend chunked upload: 61.3 % uploaded (1)
+0012.083 (0) Remotesend chunked upload: 100 % uploaded (2)
+0012.084 (0) Remote send upload: success
+0012.084 (0) Recording as successfully uploaded: backup_2026-08-18-1446_Sharan_Executive_Transport_c8ba25d5d5c1-themes.zip
+0012.085 (0) Deleting local file: backup_2026-08-18-1446_Sharan_Executive_Transport_c8ba25d5d5c1-themes.zip: OK
+0012.086 (0) No backup of uploads: excluded by user's options
+0012.087 (0) No backup of mu-plugins: excluded by user's options
+0012.087 (0) No backup of wpcore: excluded by user's options
+0012.087 (0) No backup of others: excluded by user's options
+0012.088 (0) No backup of more: excluded by user's options
+0012.089 (0) Saving backup status to database (elements: 2)
+0012.091 (0) No database backup (wp) - not part of this run
+0012.091 (0) backup_2026-08-18-1446_Sharan_Executive_Transport_c8ba25d5d5c1-themes.zip: themes: This file has already been successfully uploaded
+0012.092 (0) Saving backup history. Total backup size: 3.3 MB
+0012.093 (0) Resume backup (c8ba25d5d5c1, 0): finish run
+0012.093 (0) There were no more files that needed uploading
+0012.094 (0) Prune old backups from local store: skipping, as this was a remote send operation
+0012.813 (0) Decremented the semaphore (f) by 1
+0012.813 (0) Semaphore (f) unlocked
+0012.813 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0012.814 (0) Deleting zip manifest (backup_2026-08-18-1446_Sharan_Executive_Transport_c8ba25d5d5c1-themes.zip.list.tmp)
+0012.815 (0) No email will/can be sent - the user has not configured an email address.
+0012.815 (0) The backup succeeded and is now complete. To complete your migration/clone, you should now log in to the remote site and restore the backup set.

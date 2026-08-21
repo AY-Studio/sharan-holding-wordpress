@@ -6,7 +6,7 @@ $link    = get_sub_field( 'link' );
 ?>
 
 <section id="gallery" class="gallery">
-        <div class="container">
+        <div class="container-lg">
           <div class="section-heading mx-auto text-center">
             <?php if ( $heading ) : ?>
               <h2><?php echo esc_html( $heading ); ?></h2>

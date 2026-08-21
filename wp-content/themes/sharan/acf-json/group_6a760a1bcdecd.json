@@ -233,6 +233,23 @@
                             "delay": 0
                         },
                         {
+                            "key": "field_6a7a364d92f14",
+                            "label": "Button",
+                            "name": "button",
+                            "aria-label": "",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "allow_in_bindings": 0
+                        },
+                        {
                             "key": "field_6a7a366d92f16",
                             "label": "Image",
                             "name": "image",
@@ -257,6 +274,87 @@
                             "mime_types": "",
                             "allow_in_bindings": 0,
                             "preview_size": "medium"
+                        },
+                        {
+                            "key": "field_6a7a367d92f17",
+                            "label": "Image Position",
+                            "name": "image_position",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "Choose which side of the content the image displays on.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "left": "Left",
+                                "right": "Right"
+                            },
+                            "default_value": "right",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "allow_in_bindings": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "create_options": 0,
+                            "save_options": 0
+                        },
+                        {
+                            "key": "field_6a7a368d92f18",
+                            "label": "Padding Top",
+                            "name": "padding_top",
+                            "aria-label": "",
+                            "type": "checkbox",
+                            "instructions": "Select to remove the section's top padding.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "enabled": "Apply pt-0"
+                            },
+                            "default_value": [],
+                            "return_format": "value",
+                            "allow_custom": 0,
+                            "allow_in_bindings": 0,
+                            "layout": "vertical",
+                            "toggle": 0,
+                            "save_custom": 0,
+                            "custom_choice_button_text": "Add new choice"
+                        },
+                        {
+                            "key": "field_6a7a369d92f19",
+                            "label": "Padding Bottom",
+                            "name": "padding_bottom",
+                            "aria-label": "",
+                            "type": "checkbox",
+                            "instructions": "Select to reduce the section's bottom padding.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "enabled": "Apply pb-0"
+                            },
+                            "default_value": [],
+                            "return_format": "value",
+                            "allow_custom": 0,
+                            "allow_in_bindings": 0,
+                            "layout": "vertical",
+                            "toggle": 0,
+                            "save_custom": 0,
+                            "custom_choice_button_text": "Add new choice"
                         }
                     ],
                     "min": "",
@@ -781,5 +879,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1786353447
+    "modified": 1787224111
 }
