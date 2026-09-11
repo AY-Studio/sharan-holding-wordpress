@@ -124,7 +124,7 @@ if (!prefersReducedMotion && hasGsapScrollTrigger) {
     });
   });
 
-  gsap.utils.toArray("img").forEach((image) => {
+  gsap.utils.toArray("img:not(.service-gallery-slide-image)").forEach((image) => {
     gsap.from(image, {
       opacity: 0,
       duration: 1,
@@ -135,6 +135,47 @@ if (!prefersReducedMotion && hasGsapScrollTrigger) {
         once: true,
       },
     });
+  });
+}
+
+if (window.Swiper) {
+  document.querySelectorAll(".service-gallery").forEach((slider) => {
+    const hasMultipleSlides = slider.querySelectorAll(".swiper-slide").length > 1;
+    let serviceGallerySwiper;
+
+    const initialiseServiceGallery = () => {
+      if (!serviceGallerySwiper) {
+        serviceGallerySwiper = new Swiper(slider, {
+          slidesPerView: 1,
+          spaceBetween: 24,
+          loop: hasMultipleSlides,
+          keyboard: {
+            enabled: true,
+            onlyInViewport: true,
+          },
+          navigation: hasMultipleSlides
+            ? {
+                nextEl: slider.querySelector(".service-gallery-button-next"),
+                prevEl: slider.querySelector(".service-gallery-button-prev"),
+              }
+            : false,
+          pagination: hasMultipleSlides
+            ? {
+                el: slider.querySelector(".service-gallery-pagination"),
+                clickable: true,
+              }
+            : false,
+          speed: prefersReducedMotion ? 0 : 600,
+        });
+      } else {
+        serviceGallerySwiper.update();
+      }
+    };
+
+    slider.closest(".service-gallery-modal")?.addEventListener(
+      "shown.bs.modal",
+      initialiseServiceGallery,
+    );
   });
 }
 

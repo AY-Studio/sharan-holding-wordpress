@@ -62,7 +62,7 @@
         </button>
         <div class="collapse navbar-collapse" id="primaryNav">
           <div
-            class="header-social d-none d-xl-flex col-lg-3"
+            class="header-social col-lg-3"
             aria-label="Social links"
           >
             <a
